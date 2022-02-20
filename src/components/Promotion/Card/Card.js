@@ -7,7 +7,7 @@ const PromotionCard = ({promo})=>{
       maxWidth:800,
       margin:'30px auto'
     }}>
-      <img className='promo-card__img' src={promo.imageUrl} alt='alt'/>
+      <img className='promo-card__img' src={promo.imageUrl} alt={promo.title}/>
       <div className='promo-card__info'>
         <h1 className='promo-card__title'>{promo.title}</h1>
         <span className='promo-card__price'>R$ {promo.price}</span>
@@ -19,7 +19,7 @@ const PromotionCard = ({promo})=>{
             {promo.comments.length}{' '}
             {promo.comments.length>1 ? 'Comentários': 'Comentário'}
           </div>
-          <a className='promo-card__link' href={promo.url} target='_blank' rel='noreferrer'>Ir para o site</a>
+          <a className='promo-card__link' href={promo.url} target='_blank' rel='noreferrer noopener'>Ir para o site</a>
         </footer>
       </div>
     </div>
